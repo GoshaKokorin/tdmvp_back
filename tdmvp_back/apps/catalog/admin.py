@@ -1,7 +1,9 @@
 from django.contrib import admin
+from import_export import resources
 
 from .models import Category, Product, ProductImage, ProductCharacteristic, ProductTag
 
+from import_export.admin import ImportExportModelAdmin
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -26,7 +28,7 @@ class ProductCharacteristicInline(admin.TabularInline):
 
 
 @admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(ImportExportModelAdmin):
     list_display = ['name', 'category', 'is_active']
     list_editable = ['is_active']
     search_fields = ['name']

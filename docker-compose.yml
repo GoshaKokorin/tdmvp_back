@@ -12,7 +12,7 @@ services:
       - ./static:/usr/src/app/static
       - ./media:/usr/src/app/media
     ports:
-      - 8000:8000
+      - 8001:8000
     env_file:
       - ./.env.dev
     depends_on:
@@ -20,7 +20,7 @@ services:
 
   db:
     image: postgres:12
-    container_name: lasermig_db
+    container_name: tdmvp_back_db
     volumes:
       - tdmvp_back_postgres_data:/var/lib/postgresql/data/
     env_file:

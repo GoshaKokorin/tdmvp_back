@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'corsheaders',
     'django_filters',
+    'import_export',
 
     'tdmvp_back.apps.catalog',
     'tdmvp_back.apps.feedbacks',
